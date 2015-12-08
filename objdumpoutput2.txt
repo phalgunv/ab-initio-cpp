@@ -1,0 +1,259 @@
+
+array.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <_Z5printPc>:
+#include<string>
+using namespace std;
+
+
+void print(char * b)
+{
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	53                   	push   %rbx
+   5:	48 83 ec 18          	sub    $0x18,%rsp
+   9:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
+	cout << "Addr of 3rd ele " << (void *)&b[2] << endl;
+   d:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  11:	48 8d 58 02          	lea    0x2(%rax),%rbx
+  15:	be 00 00 00 00       	mov    $0x0,%esi
+			16: R_X86_64_32	.rodata
+  1a:	bf 00 00 00 00       	mov    $0x0,%edi
+			1b: R_X86_64_32	_ZSt4cout
+  1f:	e8 00 00 00 00       	callq  24 <_Z5printPc+0x24>
+			20: R_X86_64_PC32	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc-0x4
+  24:	48 89 de             	mov    %rbx,%rsi
+  27:	48 89 c7             	mov    %rax,%rdi
+  2a:	e8 00 00 00 00       	callq  2f <_Z5printPc+0x2f>
+			2b: R_X86_64_PC32	_ZNSolsEPKv-0x4
+  2f:	be 00 00 00 00       	mov    $0x0,%esi
+			30: R_X86_64_32	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+  34:	48 89 c7             	mov    %rax,%rdi
+  37:	e8 00 00 00 00       	callq  3c <_Z5printPc+0x3c>
+			38: R_X86_64_PC32	_ZNSolsEPFRSoS_E-0x4
+	cout << "Addr of 3rd ele " << (void *)&b[0] << endl;
+  3c:	be 00 00 00 00       	mov    $0x0,%esi
+			3d: R_X86_64_32	.rodata
+  41:	bf 00 00 00 00       	mov    $0x0,%edi
+			42: R_X86_64_32	_ZSt4cout
+  46:	e8 00 00 00 00       	callq  4b <_Z5printPc+0x4b>
+			47: R_X86_64_PC32	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc-0x4
+  4b:	48 8b 55 e8          	mov    -0x18(%rbp),%rdx
+  4f:	48 89 d6             	mov    %rdx,%rsi
+  52:	48 89 c7             	mov    %rax,%rdi
+  55:	e8 00 00 00 00       	callq  5a <_Z5printPc+0x5a>
+			56: R_X86_64_PC32	_ZNSolsEPKv-0x4
+  5a:	be 00 00 00 00       	mov    $0x0,%esi
+			5b: R_X86_64_32	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+  5f:	48 89 c7             	mov    %rax,%rdi
+  62:	e8 00 00 00 00       	callq  67 <_Z5printPc+0x67>
+			63: R_X86_64_PC32	_ZNSolsEPFRSoS_E-0x4
+	b = b++;
+  67:	48 83 45 e8 01       	addq   $0x1,-0x18(%rbp)
+	//(*b)++;
+	cout << b << endl;
+  6c:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  70:	48 89 c6             	mov    %rax,%rsi
+  73:	bf 00 00 00 00       	mov    $0x0,%edi
+			74: R_X86_64_32	_ZSt4cout
+  78:	e8 00 00 00 00       	callq  7d <_Z5printPc+0x7d>
+			79: R_X86_64_PC32	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc-0x4
+  7d:	be 00 00 00 00       	mov    $0x0,%esi
+			7e: R_X86_64_32	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+  82:	48 89 c7             	mov    %rax,%rdi
+  85:	e8 00 00 00 00       	callq  8a <_Z5printPc+0x8a>
+			86: R_X86_64_PC32	_ZNSolsEPFRSoS_E-0x4
+}
+  8a:	48 83 c4 18          	add    $0x18,%rsp
+  8e:	5b                   	pop    %rbx
+  8f:	c9                   	leaveq 
+  90:	c3                   	retq   
+
+0000000000000091 <_Z6print1Pc>:
+
+void print1(char a1[])
+{
+  91:	55                   	push   %rbp
+  92:	48 89 e5             	mov    %rsp,%rbp
+  95:	53                   	push   %rbx
+  96:	48 83 ec 18          	sub    $0x18,%rsp
+  9a:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
+	//char i[] = "def";
+	//i++;
+	//cout << i << endl;
+	cout << "addr of 3rd ele " << (void *)&a1[2] << endl;
+  9e:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  a2:	48 8d 58 02          	lea    0x2(%rax),%rbx
+  a6:	be 00 00 00 00       	mov    $0x0,%esi
+			a7: R_X86_64_32	.rodata+0x11
+  ab:	bf 00 00 00 00       	mov    $0x0,%edi
+			ac: R_X86_64_32	_ZSt4cout
+  b0:	e8 00 00 00 00       	callq  b5 <_Z6print1Pc+0x24>
+			b1: R_X86_64_PC32	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc-0x4
+  b5:	48 89 de             	mov    %rbx,%rsi
+  b8:	48 89 c7             	mov    %rax,%rdi
+  bb:	e8 00 00 00 00       	callq  c0 <_Z6print1Pc+0x2f>
+			bc: R_X86_64_PC32	_ZNSolsEPKv-0x4
+  c0:	be 00 00 00 00       	mov    $0x0,%esi
+			c1: R_X86_64_32	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+  c5:	48 89 c7             	mov    %rax,%rdi
+  c8:	e8 00 00 00 00       	callq  cd <_Z6print1Pc+0x3c>
+			c9: R_X86_64_PC32	_ZNSolsEPFRSoS_E-0x4
+	cout << a1 <<endl;
+  cd:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  d1:	48 89 c6             	mov    %rax,%rsi
+  d4:	bf 00 00 00 00       	mov    $0x0,%edi
+			d5: R_X86_64_32	_ZSt4cout
+  d9:	e8 00 00 00 00       	callq  de <_Z6print1Pc+0x4d>
+			da: R_X86_64_PC32	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc-0x4
+  de:	be 00 00 00 00       	mov    $0x0,%esi
+			df: R_X86_64_32	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+  e3:	48 89 c7             	mov    %rax,%rdi
+  e6:	e8 00 00 00 00       	callq  eb <_Z6print1Pc+0x5a>
+			e7: R_X86_64_PC32	_ZNSolsEPFRSoS_E-0x4
+	a1++;
+  eb:	48 83 45 e8 01       	addq   $0x1,-0x18(%rbp)
+	cout << a1 <<endl;
+  f0:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  f4:	48 89 c6             	mov    %rax,%rsi
+  f7:	bf 00 00 00 00       	mov    $0x0,%edi
+			f8: R_X86_64_32	_ZSt4cout
+  fc:	e8 00 00 00 00       	callq  101 <_Z6print1Pc+0x70>
+			fd: R_X86_64_PC32	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc-0x4
+ 101:	be 00 00 00 00       	mov    $0x0,%esi
+			102: R_X86_64_32	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+ 106:	48 89 c7             	mov    %rax,%rdi
+ 109:	e8 00 00 00 00       	callq  10e <_Z6print1Pc+0x7d>
+			10a: R_X86_64_PC32	_ZNSolsEPFRSoS_E-0x4
+	(*a1)++;
+ 10e:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+ 112:	0f b6 00             	movzbl (%rax),%eax
+ 115:	8d 50 01             	lea    0x1(%rax),%edx
+ 118:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+ 11c:	88 10                	mov    %dl,(%rax)
+	cout << a1 << endl;
+ 11e:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+ 122:	48 89 c6             	mov    %rax,%rsi
+ 125:	bf 00 00 00 00       	mov    $0x0,%edi
+			126: R_X86_64_32	_ZSt4cout
+ 12a:	e8 00 00 00 00       	callq  12f <_Z6print1Pc+0x9e>
+			12b: R_X86_64_PC32	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc-0x4
+ 12f:	be 00 00 00 00       	mov    $0x0,%esi
+			130: R_X86_64_32	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+ 134:	48 89 c7             	mov    %rax,%rdi
+ 137:	e8 00 00 00 00       	callq  13c <_Z6print1Pc+0xab>
+			138: R_X86_64_PC32	_ZNSolsEPFRSoS_E-0x4
+}
+ 13c:	48 83 c4 18          	add    $0x18,%rsp
+ 140:	5b                   	pop    %rbx
+ 141:	c9                   	leaveq 
+ 142:	c3                   	retq   
+
+0000000000000143 <main>:
+
+int main()
+{
+ 143:	55                   	push   %rbp
+ 144:	48 89 e5             	mov    %rsp,%rbp
+ 147:	48 83 ec 30          	sub    $0x30,%rsp
+	char *a = "1234567890";
+ 14b:	48 c7 45 f0 00 00 00 	movq   $0x0,-0x10(%rbp)
+ 152:	00 
+			14f: R_X86_64_32S	.rodata+0x22
+	//(*a)++;
+	char a1[]="0123456789";
+ 153:	c7 45 e0 30 31 32 33 	movl   $0x33323130,-0x20(%rbp)
+ 15a:	c7 45 e4 34 35 36 37 	movl   $0x37363534,-0x1c(%rbp)
+ 161:	66 c7 45 e8 38 39    	movw   $0x3938,-0x18(%rbp)
+ 167:	c6 45 ea 00          	movb   $0x0,-0x16(%rbp)
+	//a1++;
+
+	print(a);
+ 16b:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+ 16f:	48 89 c7             	mov    %rax,%rdi
+ 172:	e8 00 00 00 00       	callq  177 <main+0x34>
+			173: R_X86_64_PC32	_Z5printPc-0x4
+	print1(a1);
+ 177:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+ 17b:	48 89 c7             	mov    %rax,%rdi
+ 17e:	e8 00 00 00 00       	callq  183 <main+0x40>
+			17f: R_X86_64_PC32	_Z6print1Pc-0x4
+	cout << a1 << endl;
+ 183:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+ 187:	48 89 c6             	mov    %rax,%rsi
+ 18a:	bf 00 00 00 00       	mov    $0x0,%edi
+			18b: R_X86_64_32	_ZSt4cout
+ 18f:	e8 00 00 00 00       	callq  194 <main+0x51>
+			190: R_X86_64_PC32	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc-0x4
+ 194:	be 00 00 00 00       	mov    $0x0,%esi
+			195: R_X86_64_32	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+ 199:	48 89 c7             	mov    %rax,%rdi
+ 19c:	e8 00 00 00 00       	callq  1a1 <main+0x5e>
+			19d: R_X86_64_PC32	_ZNSolsEPFRSoS_E-0x4
+	int x = 5;
+ 1a1:	c7 45 dc 05 00 00 00 	movl   $0x5,-0x24(%rbp)
+	const int *y = &x;
+ 1a8:	48 8d 45 dc          	lea    -0x24(%rbp),%rax
+ 1ac:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+	//(*y)++;
+	cout << *y << endl;
+ 1b0:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+ 1b4:	8b 00                	mov    (%rax),%eax
+ 1b6:	89 c6                	mov    %eax,%esi
+ 1b8:	bf 00 00 00 00       	mov    $0x0,%edi
+			1b9: R_X86_64_32	_ZSt4cout
+ 1bd:	e8 00 00 00 00       	callq  1c2 <main+0x7f>
+			1be: R_X86_64_PC32	_ZNSolsEi-0x4
+ 1c2:	be 00 00 00 00       	mov    $0x0,%esi
+			1c3: R_X86_64_32	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+ 1c7:	48 89 c7             	mov    %rax,%rdi
+ 1ca:	e8 00 00 00 00       	callq  1cf <main+0x8c>
+			1cb: R_X86_64_PC32	_ZNSolsEPFRSoS_E-0x4
+ 1cf:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 1d4:	c9                   	leaveq 
+ 1d5:	c3                   	retq   
+
+00000000000001d6 <_Z41__static_initialization_and_destruction_0ii>:
+ 1d6:	55                   	push   %rbp
+ 1d7:	48 89 e5             	mov    %rsp,%rbp
+ 1da:	48 83 ec 10          	sub    $0x10,%rsp
+ 1de:	89 7d fc             	mov    %edi,-0x4(%rbp)
+ 1e1:	89 75 f8             	mov    %esi,-0x8(%rbp)
+ 1e4:	83 7d fc 01          	cmpl   $0x1,-0x4(%rbp)
+ 1e8:	75 2a                	jne    214 <_Z41__static_initialization_and_destruction_0ii+0x3e>
+ 1ea:	81 7d f8 ff ff 00 00 	cmpl   $0xffff,-0x8(%rbp)
+ 1f1:	75 21                	jne    214 <_Z41__static_initialization_and_destruction_0ii+0x3e>
+  extern wostream wclog;	///< Linked to standard error (buffered)
+#endif
+  //@}
+
+  // For construction of filebuffers for cout, cin, cerr, clog et. al.
+  static ios_base::Init __ioinit;
+ 1f3:	bf 00 00 00 00       	mov    $0x0,%edi
+			1f4: R_X86_64_32	.bss
+ 1f8:	e8 00 00 00 00       	callq  1fd <_Z41__static_initialization_and_destruction_0ii+0x27>
+			1f9: R_X86_64_PC32	_ZNSt8ios_base4InitC1Ev-0x4
+ 1fd:	b8 00 00 00 00       	mov    $0x0,%eax
+			1fe: R_X86_64_32	_ZNSt8ios_base4InitD1Ev
+ 202:	ba 00 00 00 00       	mov    $0x0,%edx
+			203: R_X86_64_32	__dso_handle
+ 207:	be 00 00 00 00       	mov    $0x0,%esi
+			208: R_X86_64_32	.bss
+ 20c:	48 89 c7             	mov    %rax,%rdi
+ 20f:	e8 00 00 00 00       	callq  214 <_Z41__static_initialization_and_destruction_0ii+0x3e>
+			210: R_X86_64_PC32	__cxa_atexit-0x4
+ 214:	c9                   	leaveq 
+ 215:	c3                   	retq   
+
+0000000000000216 <_GLOBAL__I__Z5printPc>:
+ 216:	55                   	push   %rbp
+ 217:	48 89 e5             	mov    %rsp,%rbp
+ 21a:	be ff ff 00 00       	mov    $0xffff,%esi
+ 21f:	bf 01 00 00 00       	mov    $0x1,%edi
+ 224:	e8 ad ff ff ff       	callq  1d6 <_Z41__static_initialization_and_destruction_0ii>
+ 229:	c9                   	leaveq 
+ 22a:	c3                   	retq   

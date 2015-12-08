@@ -1,0 +1,32 @@
+execve("./a.out", ["./a.out"], [/* 30 vars */]) = 0
+brk(0)                                  = 0x1fa1000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f8d9deb3000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY)      = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=79930, ...}) = 0
+mmap(NULL, 79930, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f8d9de9f000
+close(3)                                = 0
+open("/lib64/libc.so.6", O_RDONLY)      = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p\356A\370=\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1926480, ...}) = 0
+mmap(0x3df8400000, 3750152, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3df8400000
+mprotect(0x3df858a000, 2097152, PROT_NONE) = 0
+mmap(0x3df878a000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18a000) = 0x3df878a000
+mmap(0x3df878f000, 18696, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x3df878f000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f8d9de9e000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f8d9de9d000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f8d9de9c000
+arch_prctl(ARCH_SET_FS, 0x7f8d9de9d700) = 0
+mprotect(0x3df878a000, 16384, PROT_READ) = 0
+mprotect(0x3df7e1f000, 4096, PROT_READ) = 0
+munmap(0x7f8d9de9f000, 79930)           = 0
+brk(0)                                  = 0x1fa1000
+brk(0x1fc2000)                          = 0x1fc2000
+fstat(1, {st_mode=S_IFREG|0664, st_size=1644, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f8d9deb2000
+write(1, "String = tutorialspoint,  Addres"..., 94String = tutorialspoint,  Address = 33165328
+String = tutorialspoint.com,  Address = 33165328
+) = 94
+exit_group(0)                           = ?
++++ exited with 0 +++
