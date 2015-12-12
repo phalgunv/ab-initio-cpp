@@ -33,15 +33,22 @@ class digital
 		while(1)
 		{
 		s %= 60;
-		cout << h << ":" << m << ":" << s << endl;sleep(2);
 		if(s == 59)
 		M();
+        getValues();
 		s++;
 		}
 	}
+    
+    void getValues(){
+        cout<<" h = "<<h<<"m = "<<m<<"s = "<<s<<endl;
+        sleep(1);
+    }
 
 };
 
+	digital *obj = new digital(0,0,0);
+	digital *obj1 = new digital(12,34,56);
 void*
 do_loop(void* data)
 {
@@ -54,15 +61,30 @@ do_loop(void* data)
 void sighandler(int signum)
 {
 	cout << "received sigint.." << signum <<  endl;
+    static int count;
+    obj1->getValues();
+    if(count)
+    {
+        obj1 = obj;
+    cout<<"After assigning values"<<endl;
+    pthread_kill(id4);
+    obj1->getValues();
+    sleep(5);
+    }
+    if (count == 0) 
+    count++;
 //	sleep(5);
 }
+
+    
 int main()
 {
 	signal(SIGINT,sighandler);	   
-	digital *obj = new digital();
-	digital *obj1 = new digital(12,34,56);
+    pause();
     int  thr_id, thr_id2, id3, id4;         /* thread ID for the newly created thread */
+    int t2;
     pthread_t  p_thread, p_thread2, t3, t4;       /* thread's structure                     */
+    pthread_t p_thread4;
 
     /* create a new thread that will execute 'do_loop()' */
     thr_id = pthread_create(&p_thread, NULL, do_loop, (void*)obj);
