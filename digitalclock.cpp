@@ -8,7 +8,7 @@ class digital
 	digital():s(0),m(0),h(0)
 	{
 	}
-	}
+	
 	void H()
 	{
 		h %= 24;

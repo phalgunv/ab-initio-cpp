@@ -181,28 +181,33 @@ int main()
 	getline(cin, str);
 	int len = slen(str.c_str());
 	cout << "The length of the string is " << len << endl;
+	cout << "The 1/2 length of the string is " << (len-1)/2 << endl;
 	const char *buf = (char *)malloc(sizeof(char)*len);		
 	buf = str.c_str();
 	stack obj;
-	for(int i = 0; i < len/2; i++)
+	int i,j;
+	for(i = 0; i <= (len-1)/2; i++)
 	{
 		obj.push(buf[i]);
 	}
 	obj.print();
 	//cout << buf << endl;
-	for(int i = len-1; i >= len/2; i++)
+	for(j = i-1; j < len; j++)
 	{
 		int d = obj.pop();
-		cout << buf[i] << endl;
-		if(d == buf[i])
+		cout << buf[j] << endl;
+		cout << "value of i is" << j << endl;
+		if(d == buf[j])
+		{
 		c++;
+		if(j == len-1)
+		cout << "palindrome" << endl;
+		}
 		else
 		{
 			cout << "the string is not a palindrome" << endl;
 			break;
 		}
-	}		
-	if(c == len/2)
-	cout << "The string is a palindrome" << endl;
+	}
 }
   
