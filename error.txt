@@ -1,0 +1,24 @@
+stacklinkedlist.cpp:13: error: return type specification for constructor invalid
+stacklinkedlist.cpp:16: error: return type specification for constructor invalid
+stacklinkedlist.cpp:19: error: return type specification for constructor invalid
+stacklinkedlist.cpp:37: error: return type specification for constructor invalid
+stacklinkedlist.cpp:38: error: return type specification for constructor invalid
+stacklinkedlist.cpp: In member function ‘int linkedlist::length()’:
+stacklinkedlist.cpp:70: error: ‘p’ was not declared in this scope
+stacklinkedlist.cpp: At global scope:
+stacklinkedlist.cpp:75: error: ISO C++ forbids declaration of ‘addelefirst’ with no type
+stacklinkedlist.cpp:75: error: prototype for ‘int linkedlist::addelefirst(int)’ does not match any in class ‘linkedlist’
+stacklinkedlist.cpp:43: error: candidate is: void linkedlist::addelefirst(int)
+stacklinkedlist.cpp:100: error: ISO C++ forbids declaration of ‘print’ with no type
+stacklinkedlist.cpp:100: error: prototype for ‘int linkedlist::print()’ does not match any in class ‘linkedlist’
+stacklinkedlist.cpp:41: error: candidate is: void linkedlist::print()
+stacklinkedlist.cpp:112: error: ISO C++ forbids declaration of ‘swap’ with no type
+stacklinkedlist.cpp:112: error: prototype for ‘int linkedlist::swap(node*, node*)’ does not match any in class ‘linkedlist’
+stacklinkedlist.cpp:45: error: candidate is: void linkedlist::swap(node*, node*)
+stacklinkedlist.cpp:119: error: ISO C++ forbids declaration of ‘sort’ with no type
+stacklinkedlist.cpp:119: error: prototype for ‘int linkedlist::sort(int)’ does not match any in class ‘linkedlist’
+stacklinkedlist.cpp:42: error: candidate is: void linkedlist::sort(int)
+stacklinkedlist.cpp:144: error: return type specification for constructor invalid
+stacklinkedlist.cpp:147: error: return type specification for constructor invalid
+stacklinkedlist.cpp: In function ‘int main()’:
+stacklinkedlist.cpp:176: error: no matching function for call to ‘getline(std::istream&, char*&)’

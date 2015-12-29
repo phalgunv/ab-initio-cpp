@@ -1,0 +1,35 @@
+********Child 0 with pid 5095 created *********
+ l = 2r = 3j = 0i = 0
+in for :::: value of a[0] 1
+in for :::: value of a[1] 2
+the ------sum------- of process 0 is 6
+ i = 5
+ l + r =5
+parents block:::5095
+********Child 1 with pid 5096 created *********
+ l = 2r = 3j = 1i = 5
+in for :::: value of a[5] 6
+in for :::: value of a[6] 7
+the ------sum------- of process 1 is 13
+ i = 7
+ l + r =5
+return value is 7
+parents block:::5096
+********Child 2 with pid 5097 created *********
+ l = 2r = 3j = 2i = 7
+in for :::: value of a[7] 8
+in for :::: value of a[8] 9
+the ------sum------- of process 2 is 17
+ i = 9
+ l + r =5
+return value is 9
+parents block:::5097
+********Child 3 with pid 5098 created *********
+ l = 2r = 3j = 3i = 9
+in for :::: value of a[9] 10
+in for :::: value of a[10] 11
+the ------sum------- of process 3 is 21
+ i = 11
+ l + r =5
+return value is 11
+parents block:::5098
